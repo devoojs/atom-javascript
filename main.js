@@ -12,7 +12,6 @@ console.log(myfun());
 
 
 
-
 const SETTINGS = 1;
 if (true) {
   const SETTINGS = 2;
@@ -22,11 +21,9 @@ console.log(SETTINGS);
 
 
 
-
 const SETTINGS = [];
 SETTINGS.push('html', 'css', 'javascript');
 console.log(SETTINGS);
-
 
 
 
@@ -39,35 +36,54 @@ console.log(SETTINGS);
 
 
 
+let myfun1 = () => 1;
+let myfun2 = _ => 2;
+let myfun3 = (parameter) => parameter * 3;
+let myfun4 = (parameter1, parameter2) => parameter1 + parameter2;
 
-const SETTINGS = {
-  'name' : 'AbdAlrazzaq',
-  'age' : '28',
-};
-object.freeze(SETTINGS);
-SETTINGS.name = 'Ali';
-console.log(SETTINGS);
-
-
-
-
-let array1 = [1,2,3];
-let  array2 = [...array1];
-array2.push(66);
-console.log(array1);
-console.log(array2);
+console.log(myfun1());
+console.log(myfun2());
+console.log(myfun3(3));
+console.log(myfun4(4, 4));
 
 
+let test = () => document.getElementById('show').innerHTML = this;
+window.onload = test;
+document.getElementById('btn').addEventListener('click', test);
 
 
-let  array3 = [1,2,3,...array2,6,7];
-console.log(array3);
-
-
-
-
-function  myfun(usrname, pasword, url){
-  return `Hello ${usrname} how ar you ${pasword} wat linl ${url}`;
+//[1]
+function myfun5(){
+    this.age = 0;
+    setInterval(function(){
+        this.age++;
+        console.log(this.age);
+    },1000);
 }
-console.log(myfun('Abd', 'a123', 'www'));
+
+let usr = new myfun5();
+
+
+//[2]
+function myfun6(){
+    let mythis = this;
+    this.age = 0;
+    setInterval(function(){
+        mythis.age++;
+        console.log(mythis.age);
+    },1000);
+}
+let usr = new myfun6();
+
+
+//[3]
+function myfun7(){
+
+    this.age = 0;
+    setInterval(() => {
+        this.age++;
+        console.log(this.age);
+    },1000);
+}
+let usr = new myfun7();
 
