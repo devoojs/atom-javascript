@@ -42,6 +42,19 @@ const users = [{
   id: 2,
   name: "Sam"
 }];
+users.forEach(user => {
+  console.log(user); // an object
+  console.log(user.id);
+  console.log(user.name);
+});
+
+const users = [{
+  id: 1,
+  name: "Alex"
+}, {
+  id: 2,
+  name: "Sam"
+}];
 console.log(users)
 
 "Hello World".includes("World"); // true
