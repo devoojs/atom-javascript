@@ -34,6 +34,16 @@ function multiply(a, b){
 //sample usage
 console.log(multiply(2, 4));
 
+
+const users = [{
+  id: 1,
+  name: "Alex"
+}, {
+  id: 2,
+  name: "Sam"
+}];
+console.log(users)
+
 "Hello World".includes("World"); // true
 "Hello World".includes("Potato"); // false
 
