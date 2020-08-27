@@ -86,4 +86,3 @@ function myfun7(){
     },1000);
 }
 let usr = new myfun7();
-
